@@ -1,0 +1,259 @@
+/*------------------------------------------
+              ROOT VARIABLES
+    If you want to change a color, you just
+    can change it from here.
+  ------------------------------------------*/
+:root {
+  scroll-behavior: smooth;
+  --color-default: #23272A;
+  --color-primary: #91089d;
+  --color-secondary: #139d08;
+  --color-white: #f1f1f1;
+  --color-blue: #012970;
+  --font-primary: "Open Sans", sans-serif;
+  --font-secondary: "Nunito", sans-serif;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+	font: 100%;
+	font-weight: normal;
+	outline: none;
+	vertical-align: baseline;
+}
+
+
+
+body {
+  font-family: var(--font-primary);
+  color: var(--color-default);
+  background-color: var(--color-default);
+}
+
+a {
+  color: var(--color-secondary);
+  text-decoration: none;
+  -webkit-transition: all ease-in-out 0.3s;
+  -o-transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.3s;
+}
+
+a:hover {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-secondary);
+}
+
+/*------------------------------------------
+                        SECTIONS
+          this is just top handle as a component
+          instead of give a style to each section
+      --------------------------------------------*/
+section {
+  padding: 60px 0;
+  overflow: hidden;
+}
+
+.section-header {
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+.section-header h2 {
+  font-size: 13px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  margin: 0;
+
+  text-transform: uppercase;
+}
+
+.section-header p {
+  margin: 10px 0 0 0;
+  padding: 0;
+  font-size: 38px;
+  line-height: 42px;
+  font-weight: 700;
+  color: var(--color-default);
+}
+
+.section-heading {
+  font-size: 3rem;
+  font-weight: bolder;
+  color: var(--color-white);
+}
+
+/*--------------------------------------------------------------
+    # HEADER
+    --------------------------------------------------------------*/
+.header {
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  z-index: 997;
+  padding: 20px 0;
+}
+
+.header .logo {
+  line-height: 0;
+}
+
+.header .logo span {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--color-white);
+  font-family: var(--font-secondary);
+  margin-top: 3px;
+}
+
+
+/*--------------------------------------------------------------
+
+      # NAVIGATION MENU
+
+      --------------------------------------------------------------*/
+
+/** DESKTOP NAVIGATION*/
+.navbar {
+  padding: 0;
+}
+
+.navbar ul {
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.navbar li {
+  position: relative;
+}
+
+.navbar a,
+.navbar a:focus {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 10px 0 10px 30px;
+  font-family: var(--font-secondary);
+  font-size: 16px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.6);
+  white-space: nowrap;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.navbar a i,
+.navbar a:focus i {
+  font-size: 12px;
+  line-height: 0;
+  margin-left: 5px;
+}
+
+.navbar a:hover,
+.navbar .active,
+.navbar .active:focus,
+.navbar li:hover > a {
+  color: var(--color-primary);
+}
+
+
+/*------------------------------------------
+    # ABOUT
+--------------------------------------------*/
+.about .content + .content {
+  margin-top: 5px;
+}
+
+.about .content h3 {
+  font-weight: 600;
+  font-size: 26px;
+}
+
+
+/*------------------------------------------
+    # FOOTER SECTION
+--------------------------------------------*/
+
+.footer {
+  background: var(--color-white);
+  font-size: 14px;
+}
+
+.footer .footer-top {
+  background: var(--color-default);
+  background-size: contain;
+  border-top: 1px solid var(--color-primary);
+  padding-top: 60px;
+}
+
+.footer .footer-top .footer-info {
+  margin-bottom: 30px;
+}
+
+.footer .footer-top .footer-info .logo {
+  line-height: 0;
+  margin-bottom: 15px;
+}
+
+.footer .footer-top .footer-info .logo span {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--color-secondary);
+  margin-top: 3px;
+}
+
+.footer .footer-top .footer-info p {
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 0;
+  font-family: "Nunito", sans-serif;
+  color: var(--color-white);
+}
+
+
+
+/*------------------------------------------
+                RESPONSIVENESS
+      --------------------------------------------*/
+/** MOBILE NAVIGATION*/
+@media (max-width: 500px) {}
+
+@media (max-width: 575px) {}
+
+@media (max-width: 768px) {}
+
+/** MID SCREEN AND/OR SMALL MONITORS NAVIGATION*/
+@media (max-width: 991px) {}
+
+/** IPADS AND TABLETS NAVIGATION*/
+@media (min-width: 1024px) {}
+
+/** lAPTOPS NAVIGATION*/
+@media (max-width: 1366px) {}
