@@ -1,0 +1,528 @@
+/*------------------------------------------
+              ROOT VARIABLES
+    If you want to change a color, you just
+    can change it from here.
+  ------------------------------------------*/
+:root {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  --color-default: #23272a;
+  --color-primary: #6649b8;
+  --color-secondary: #16df7e;
+  --color-white: #f1f1f1;
+  --color-white-secondary: #ececec;
+  --color-pink: #ff7eee;
+  --color-pink-secondary: #df49a6;
+  --color-gray: #858ea1;
+  --font-primary: "Open Sans", sans-serif;
+  --font-secondary: "Nunito", sans-serif;
+  --transition-speed: 600ms;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  font-family: var(--font-primary);
+  color: var(--color-default);
+  background-color: var(--color-white);
+}
+
+body::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--color-default);
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+}
+
+a {
+  color: var(--color-secondary);
+  text-decoration: none;
+  -webkit-transition: all ease-in-out 0.3s;
+  -o-transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.3s;
+}
+
+a:hover {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-secondary);
+}
+
+/*------------------------------------------
+                        SECTIONS
+          this is just top handle as a component
+          instead of give a style to each section
+--------------------------------------------*/
+section {
+  padding: 60px 0;
+  overflow: hidden;
+}
+
+.section-header {
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+.section-header h2 {
+  font-size: 13px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  margin: 0;
+
+  text-transform: uppercase;
+}
+
+.section-header p {
+  margin: 10px 0 0 0;
+  padding: 0;
+  font-size: 38px;
+  line-height: 42px;
+  font-weight: 700;
+  color: var(--color-default);
+}
+
+.section-heading {
+  font-size: 3rem;
+  font-weight: bolder;
+  color: var(--color-default);
+}
+
+/*--------------------------------------------------------------
+      # NAVIGATION MENU
+--------------------------------------------------------------*/
+.navbar {
+  position: fixed;
+  background-color: var(--color-default);
+  transition: width 600ms ease;
+}
+
+.navbar-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.nav-item {
+  width: 100%;
+}
+
+.nav-item:last-child {
+  margin-top: auto;
+}
+
+.nav-link,
+.game-link {
+  display: flex;
+  align-items: center;
+  height: 5rem;
+  color: var(--color-white);
+  text-decoration: none;
+  filter: grayscale(100%) opacity(0.7);
+  transition: var(--transition-speed);
+}
+
+.game-link,
+.game-link:hover,
+.nav-link:hover,
+.nav-link:focus,
+.nav-link.active {
+  filter: grayscale(0%) opacity(1);
+  background: var(--color-default);
+  color: var(--color-secondary) !important;
+}
+
+.link-text {
+  display: none;
+  margin-left: 1rem;
+}
+
+.game-link svg,
+.nav-link svg {
+  width: 2rem;
+  min-width: 2rem;
+  margin: 0 1.5rem;
+}
+
+.fa-primary {
+  color: var(--color-pink);
+}
+
+.fa-secondary {
+  color: var(--color-pink-secondary);
+}
+
+.fa-primary,
+.fa-secondary {
+  transition: var(--transition-speed);
+}
+
+.logo {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: var(--color-white-secondary);
+  background: var(--color-default);
+  font-size: 1.5rem;
+  letter-spacing: 0.3ch;
+  width: 100%;
+}
+
+.logo svg {
+  transform: rotate(0deg);
+  transition: var(--transition-speed);
+}
+
+.logo-text {
+  display: inline;
+  position: absolute;
+  left: -999px;
+  transition: var(--transition-speed);
+}
+
+.navbar:hover .logo svg {
+  transform: rotate(-180deg);
+}
+
+/*--------------------------------------------------------------
+# cover Section
+--------------------------------------------------------------*/
+#cover {
+  width: 100%;
+  height: 90vh;
+  padding-top: 20px;
+}
+
+#cover h1 {
+  margin: 0;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 56px;
+  color: var(--color-default);
+}
+
+#cover h2 {
+  color: var(--color-gray);
+  margin: 10px 0 30px 0;
+  font-size: 24px;
+}
+
+#cover .btn-get-started {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 30px 10px 30px;
+  border-radius: 4px;
+  transition: 0.5s;
+  color: var(--color-white);
+  background: var(--color-primary);
+  box-shadow: 0 8px 28px var(--color-primary);
+}
+
+#cover .btn-get-started:hover {
+  background: var(--color-secondary);
+  box-shadow: 0 8px 28px var(--color-primary);
+}
+
+#cover .animated {
+  animation: up-down 2s ease-in-out infinite alternate-reverse both;
+}
+
+
+@keyframes up-down {
+  0% {
+    transform: translateY(10px);
+  }
+
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+/*------------------------------------------
+    # MAIN SECTION
+--------------------------------------------*/
+main {
+  margin-left: 8rem;
+  padding: 1rem;
+}
+
+/*--------------------------------------------------------------
+# About
+--------------------------------------------------------------*/
+.about {
+  width: 100%;
+  height: fit-content;
+  padding: 4rem auto;
+}
+
+.about .container {
+  padding: 40px 0;
+}
+
+.about .section-title {
+  margin-top: -0.5rem;
+}
+
+.about .subcover {
+  padding-left: 3.5rem;
+  margin-top: 10rem;
+}
+
+.about .section-subtitle {
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.about .section-subtitle .caption {
+  margin-top: -0.1rem;
+  margin-bottom: 2.5rem;
+  text-align: center;
+  color: #000;
+}
+
+.about .section-subtitle h2 {
+  color: var(--color-default);
+  text-shadow: 4px 4px 5px var(--color-primary);
+}
+
+.about .section-subtitle p {
+  text-align: justify;
+  color: var(--color-default);
+}
+
+.about .icon-box {
+  margin: 2.5rem auto;
+}
+
+.about .icon-box,
+.about .icon-box + .icon-box {
+  margin-top: 25px;
+}
+
+.about .icon-box .icon {
+  float: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background: var(--color-white-secondary);
+  border-radius: 6px;
+  transition: 0.5s;
+}
+
+.about .icon-box .icon i {
+  color: var(--color-pink-secondary);
+  font-size: 32px;
+  transition: all 0.3s ease-in-out;
+}
+
+.about .icon-box:hover .icon i {
+  color: var(--color-pink);
+}
+
+.about .icon-box .title {
+  margin-left: 80px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  font-size: 18px;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.about .icon-box .title {
+  color: var(--color-pink-secondary);
+  transition: 0.3s;
+}
+
+.about .icon-box .title:hover {
+  color: var(--color-pink);
+  cursor: default;
+}
+
+.about .icon-box .description {
+  margin-left: 80px;
+  margin-right: 25px;
+  line-height: 24px;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+/*--------------------------------------------------------------
+# Team
+--------------------------------------------------------------*/
+.team {
+  padding-top: 15rem;
+}
+.team .member {
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 30px 20px;
+}
+
+.team .member img {
+  max-width: 100%;
+  margin: 0 0 30px 0;
+  border-radius: 50%;
+}
+
+.team .member h4 {
+  font-weight: 700;
+  margin-bottom: 2px;
+  font-size: 18px;
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+.footer {
+  color: var(--color-default);
+  font-size: 14px;
+  position: relative;
+  height: 30vh;
+}
+
+.footer .footer-top {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 80px 0 20px 0;
+}
+
+.footer .footer-top h3 {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--color-gray);
+  position: relative;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.footer .footer-top p {
+  font-size: 15;
+  font-style: italic;
+  margin: 30px 0 0 0;
+  padding: 0;
+}
+
+/*------------------------------------------
+                RESPONSIVENESS
+      --------------------------------------------*/
+/** MOBILE NAVIGATION*/
+@media (max-width: 575px) {
+  #cover .cover-img img {
+    width: 80%;
+  }
+}
+
+@media (min-width: 600px) {
+  .navbar {
+    top: 0;
+    width: 5rem;
+    height: 100vh;
+  }
+
+  .navbar:hover {
+    width: 16rem;
+  }
+
+  .navbar:hover .link-text {
+    display: inline;
+  }
+
+  .navbar:hover .logo svg {
+    margin-left: 11rem;
+  }
+
+  .navbar:hover .logo-text {
+    left: 0px;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    bottom: 0;
+    width: 100vw;
+    height: 5rem;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .navbar-nav {
+    flex-direction: row;
+  }
+
+  .nav-link {
+    justify-content: center;
+  }
+
+  main {
+    margin: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  #cover {
+    height: auto;
+  }
+  #cover h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  #cover h2 {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+
+  #cover .cover-img img {
+    width: 70%;
+  }
+}
+
+/** MID SCREEN AND/OR SMALL MONITORS NAVIGATION*/
+@media (max-width: 991px) {
+  #cover {
+    height: 100vh;
+  }
+
+  #cover .animated {
+    animation: none;
+  }
+
+  #cover .cover-img {
+    text-align: center;
+  }
+
+  #cover .cover-img img {
+    width: 50%;
+  }
+}
+
