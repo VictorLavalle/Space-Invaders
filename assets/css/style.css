@@ -251,7 +251,6 @@ section {
   animation: up-down 2s ease-in-out infinite alternate-reverse both;
 }
 
-
 @keyframes up-down {
   0% {
     transform: translateY(10px);
@@ -373,6 +372,48 @@ main {
 }
 
 /*--------------------------------------------------------------
+    # Gallery
+    --------------------------------------------------------------*/
+.gallery {
+  padding-top: 15rem;
+  overflow: hidden;
+}
+
+.gallery img {
+  box-shadow: 3px 3px 1px var(--color-default);
+  -webkit-box-shadow: 3px 3px 1px var(--color-default);
+  -moz-box-shadow: 3px 3px 1px var(--color-default);
+  border-radius: 15px;
+}
+
+.gallery .swiper-slide {
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.gallery .swiper-pagination {
+  margin-top: 20px;
+  position: relative;
+}
+
+.gallery .swiper-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: var(--color-white);
+  opacity: 1;
+  border: 1px solid var(--color-primary);
+}
+
+.gallery .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: var(--color-primary);
+}
+
+.gallery .swiper-slide-active {
+  text-align: center;
+}
+
+/*--------------------------------------------------------------
 # Team
 --------------------------------------------------------------*/
 .team {
@@ -395,7 +436,6 @@ main {
   margin-bottom: 2px;
   font-size: 18px;
 }
-
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
@@ -505,6 +545,20 @@ main {
   #cover .cover-img img {
     width: 70%;
   }
+
+  .gallery .swiper-slide img {
+    width: 50%;
+  }
+
+  .gallery .swiper-slide-active {
+    background: none;
+    border: none !important;
+  }
+
+  .custom-swiper-button-next,
+  .custom-swiper-button-prev {
+    display: none;
+  }
 }
 
 /** MID SCREEN AND/OR SMALL MONITORS NAVIGATION*/
@@ -524,5 +578,20 @@ main {
   #cover .cover-img img {
     width: 50%;
   }
-}
 
+  .gallery .swiper-wrapper {
+    padding: 40px 0;
+  }
+
+  .gallery .swiper-slide-active {
+    border: 6px solid #5777ba;
+    padding: 4px;
+    background: #fff;
+    z-index: 1;
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+    margin-top: 10px;
+    border-radius: 25px;
+  }
+}
